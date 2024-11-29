@@ -1,0 +1,61 @@
+2024-11-27 17:31:45.655416: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2024-11-27 17:31:47.566245: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2024-11-27 17:31:47.567518: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2024-11-27 17:31:47.663443: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:0f:00.0 name: NVIDIA A100-SXM4-40GB computeCapability: 8.0
+coreClock: 1.41GHz coreCount: 108 deviceMemorySize: 39.59GiB deviceMemoryBandwidth: 1.41TiB/s
+2024-11-27 17:31:47.663514: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2024-11-27 17:31:47.693315: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2024-11-27 17:31:47.693415: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2024-11-27 17:31:47.709851: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2024-11-27 17:31:47.718606: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2024-11-27 17:31:47.744877: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2024-11-27 17:31:47.752690: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2024-11-27 17:31:47.754064: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2024-11-27 17:31:47.760724: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2024-11-27 17:31:47.778904: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-11-27 17:31:47.779385: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2024-11-27 17:31:47.781854: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:0f:00.0 name: NVIDIA A100-SXM4-40GB computeCapability: 8.0
+coreClock: 1.41GHz coreCount: 108 deviceMemorySize: 39.59GiB deviceMemoryBandwidth: 1.41TiB/s
+2024-11-27 17:31:47.781908: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2024-11-27 17:31:47.781928: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2024-11-27 17:31:47.781942: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2024-11-27 17:31:47.781956: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2024-11-27 17:31:47.781970: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2024-11-27 17:31:47.781983: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2024-11-27 17:31:47.781997: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2024-11-27 17:31:47.782011: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2024-11-27 17:31:47.786329: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2024-11-27 17:31:47.788024: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+Traceback (most recent call last):
+  File "bin/flu.py", line 352, in <module>
+    model, seqs = setup(args)
+  File "bin/flu.py", line 110, in setup
+    model = get_model(args, seq_len, vocab_size)
+  File "/raid/ChangLab/chang_ansgoal/viral-mutation/bin/mutation.py", line 66, in get_model
+    verbose=True,
+  File "/raid/ChangLab/chang_ansgoal/viral-mutation/bin/language_model.py", line 333, in __init__
+    x_pre = embed(input_pre)
+  File "/usr/local/miniconda3/envs/flu_language/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer.py", line 952, in __call__
+    input_list)
+  File "/usr/local/miniconda3/envs/flu_language/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1091, in _functional_construction_call
+    inputs, input_masks, args, kwargs)
+  File "/usr/local/miniconda3/envs/flu_language/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer.py", line 822, in _keras_tensor_symbolic_call
+    return self._infer_output_signature(inputs, args, kwargs, input_masks)
+  File "/usr/local/miniconda3/envs/flu_language/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer.py", line 862, in _infer_output_signature
+    self._maybe_build(inputs)
+  File "/usr/local/miniconda3/envs/flu_language/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer.py", line 2710, in _maybe_build
+    self.build(input_shapes)  # pylint:disable=not-callable
+  File "/usr/local/miniconda3/envs/flu_language/lib/python3.7/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/usr/local/miniconda3/envs/flu_language/lib/python3.7/site-packages/tensorflow/python/keras/layers/embeddings.py", line 140, in build
+    if context.executing_eagerly() and tf_config.list_logical_devices('GPU'):
+  File "/usr/local/miniconda3/envs/flu_language/lib/python3.7/site-packages/tensorflow/python/framework/config.py", line 439, in list_logical_devices
+    return context.context().list_logical_devices(device_type=device_type)
+  File "/usr/local/miniconda3/envs/flu_language/lib/python3.7/site-packages/tensorflow/python/eager/context.py", line 1368, in list_logical_devices
+    self.ensure_initialized()
+  File "/usr/local/miniconda3/envs/flu_language/lib/python3.7/site-packages/tensorflow/python/eager/context.py", line 526, in ensure_initialized
+    context_handle = pywrap_tfe.TFE_NewContext(opts)
+tensorflow.python.framework.errors_impl.InternalError: CUDA runtime implicit initialization on GPU:0 failed. Status: out of memory
